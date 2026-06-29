@@ -1,6 +1,6 @@
 {
   "name": "akamai-edgedns-datasource-plugin",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Grafana datasource for Akamai Edge DNS metrics",
   "scripts": {
     "build": "webpack -c ./.config/webpack/webpack.config.ts --env production",
@@ -8,7 +8,7 @@
     "lint": "eslint --cache --ignore-path ./.gitignore --ext .js,.jsx,.ts,.tsx .",
     "lint:fix": "yarn run lint --fix && prettier --write --list-different .",
     "server": "docker compose up --build",
-    "sign": "npx --yes @grafana/sign-plugin@latest",
+    "sign": "sign-plugin",
     "test": "jest --watch --onlyChanged",
     "test:ci": "jest --passWithNoTests --maxWorkers 4",
     "typecheck": "tsc --noEmit"
@@ -17,7 +17,8 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@grafana/eslint-config": "^9.0.0",
-    "@grafana/tsconfig": "^2.0.1",
+    "@grafana/sign-plugin": "^3.2.2",
+    "@grafana/tsconfig": "2.0.1",
     "@stylistic/eslint-plugin-ts": "^4.4.1",
     "@swc/core": "^1.15.18",
     "@swc/helpers": "^0.5.19",
@@ -55,11 +56,11 @@
     "webpack": "^5.105.4",
     "webpack-cli": "^6.0.1",
     "webpack-livereload-plugin": "^3.0.2",
-    "webpack-subresource-integrity": "^5.2.0-rc.1",
+    "webpack-subresource-integrity": "5.1.0",
     "webpack-virtual-modules": "^0.6.2"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=24"
   },
   "resolutions": {
     "rxjs": "7.8.2",
@@ -67,14 +68,20 @@
     "@types/react-dom": "18.0.11",
     "dompurify": ">=3.3.2",
     "immutable": ">=5.1.5",
-    "glob": ">=10.5.0"
+    "glob": ">=10.5.0",
+    "uuid": ">=11.1.1",
+    "js-cookie": ">=3.0.7",
+    "js-yaml": ">=4.2.0",
+    "@opentelemetry/core": ">=2.8.0"
   },
   "dependencies": {
     "@emotion/css": "11.13.5",
-    "@grafana/data": "12.4.0",
-    "@grafana/runtime": "12.4.0",
-    "@grafana/schema": "^12.4.0",
-    "@grafana/ui": "12.4.0",
+    "@grafana/data": "13.1.0",
+    "@grafana/runtime": "13.1.0",
+    "@grafana/schema": "^13.1.0",
+    "@grafana/ui": "13.1.0",
+    "dompurify": ">=3.3.2",
+    "immutable": ">=5.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
