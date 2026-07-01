@@ -54,7 +54,7 @@ the requests.
 ## Installing "Akamai Edge DNS Datasource" on a local Grafana
 
 * On the [edgedns-grafana-datasource-plugin](https://github.com/akamai/edgedns-grafana-datasource-plugin) GitHub repository, 
-under "Releases", select "Grafana datasource for Akamai Edge DNS metrics v2.0.1".
+under "Releases", select "Grafana datasource for Akamai Edge DNS metrics v2.1.0".
 
 * Please download the source code as a ZIP file from the branch plugin-update on GitHub.
 
