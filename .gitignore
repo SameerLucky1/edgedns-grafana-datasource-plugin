@@ -32,3 +32,14 @@ e2e-results/
 dist/
 .DS_Store
 
+# Yarn 4
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+.pnp.cjs
+.pnp.loader.mjs
+

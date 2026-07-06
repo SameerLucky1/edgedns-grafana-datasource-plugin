@@ -9,6 +9,7 @@
 - Upgraded TypeScript from 5.9.3 to 6.0.3
 - Upgraded mage from 1.15.0 to 1.17.2
 - Upgraded Grafana Plugin SDK (Go backend) from v0.286.0 to v0.292.1
+- Upgraded Yarn from 1.22.22 to 4.17.0 (Yarn Modern)
 
 ## 2.0.1
 - Upgraded to Grafana 12.4.0

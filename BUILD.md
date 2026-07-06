@@ -10,7 +10,7 @@ Edit package.json
 
 Advance the version number.  For example:
 ```
-  "version": "2.0.0",
+  "version": "2.1.0",
 ```
 
 ## Build
@@ -19,9 +19,16 @@ See these references:
 * [Build a data source plugin](https://grafana.com/tutorials/build-a-data-source-plugin/)
 
 ### First time build
-Run this command:
+
+#### Prerequisites
+This project uses Yarn v4.17.0 (Yarn Berry) via Corepack. If you haven't enabled Corepack yet:
 ```
-yarn install --pure-lockfile
+corepack enable
+```
+
+#### Install dependencies
+```
+yarn install
 ```
 
 ### Build the back end
@@ -54,53 +61,15 @@ yarn build
 My output (after having previously built), looks like this:
 ```
 $ yarn build
-yarn run v1.22.10
-$ grafana-toolkit plugin:build
-✔ Preparing
-✔ Linting
-No tests found, exiting with code 0
-✔ Running tests
-⠙ Compiling...  Starting type checking service...
-  Using 1 worker with 2048MB memory limit
-⠏ Compiling...  
-   Hash: d25575dd888c9dc8b7f1
-  Version: webpack 4.41.5
-  Time: 5674ms
-  Built at: 03/25/2021 2:49:12 PM
-                  Asset       Size  Chunks                   Chunk Names
-                LICENSE   9.94 KiB          [emitted]        
-              README.md   5.01 KiB          [emitted]        
-    img/akamai-logo.png   1.72 KiB          [emitted]        
-              module.js   12.4 KiB       0  [emitted]        module
-  module.js.LICENSE.txt  808 bytes          [emitted]        
-          module.js.map   76.7 KiB       0  [emitted] [dev]  module
-            plugin.json   1.03 KiB          [emitted]        
-  Entrypoint module = module.js module.js.map
-   [0] external "react" 42 bytes {0} [built]
-   [1] external "@grafana/ui" 42 bytes {0} [built]
-   [2] ../node_modules/lodash/isObject.js 733 bytes {0} [built]
-   [6] ../node_modules/lodash/identity.js 370 bytes {0} [built]
-  [10] ../node_modules/lodash/eq.js 799 bytes {0} [built]
-  [11] ../node_modules/lodash/isArrayLike.js 830 bytes {0} [built]
-  [13] ../node_modules/lodash/_isIndex.js 759 bytes {0} [built]
-  [15] external "@grafana/data" 42 bytes {0} [built]
-  [16] external "@grafana/runtime" 42 bytes {0} [built]
-  [17] ../node_modules/lodash/defaults.js 1.71 KiB {0} [built]
-  [18] ../node_modules/lodash/_baseRest.js 559 bytes {0} [built]
-  [19] ../node_modules/lodash/_overRest.js 1.07 KiB {0} [built]
-  [35] ../node_modules/lodash/_isIterateeCall.js 877 bytes {0} [built]
-  [36] ../node_modules/lodash/keysIn.js 778 bytes {0} [built]
-  [51] ./module.ts + 5 modules 20.2 KiB {0} [built]
-       | ./module.ts 905 bytes [built]
-       | ./DataSource.ts 961 bytes [built]
-       | ./ConfigEditor.tsx 4.06 KiB [built]
-       | ./QueryEditor.tsx 3.64 KiB [built]
-       | ../node_modules/tslib/tslib.es6.js 10 KiB [built]
-       | ./types.ts 638 bytes [built]
-      + 37 hidden modules 
-  
-✔ Compiling...
-✨  Done in 14.65s.
+assets by path *.md 9.38 KiB
+  asset README.md 8.57 KiB [compared for emit] [from: ../README.md] [copied]
+  asset CHANGELOG.md 834 bytes [compared for emit] [from: ../CHANGELOG.md] [copied]
+asset module.js 13.6 KiB [compared for emit] [minimized] (name: module) 1 related asset
+asset LICENSE 9.94 KiB [compared for emit] [from: ../LICENSE] [copied]
+asset img/akamai-logo.png 1.72 KiB [compared for emit] [from: img/akamai-logo.png] [copied]
+asset plugin.json 1.27 KiB [emitted] [from: plugin.json] [copied]
+cached modules 61.7 KiB (javascript) 1.74 KiB (runtime) [cached] 64 modules
+webpack 5.108.3 compiled successfully in 88 ms
 ```
 
 ## Commit your changes 
@@ -111,16 +80,13 @@ Open a Pull Request.
 Copy the 'dist' directory to 'akamai-edgedns-datasource' and then compress.
 ```
 cp -r dist akamai-edgedns-datasource
-zip akamai-edgedns-datasource-2.0.0.zip akamai-edgedns-datasource/ -r
+zip akamai-edgedns-datasource-2.1.0.zip akamai-edgedns-datasource/ -r
 ```
-'2.0.0' is an example. Use your current plugin version number.
+'2.1.0' is an example. Use your current plugin version number.
 
 ## Release
-
 Navigate to https://github.com/akamai/edgedns-grafana-datasource-plugin.
-
 Log in. (You'll need admin rights.)
 
 Follow the directions in [Managing releases in a repository](https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository).  
-Tags should start with 'v', followed by the build number.  For example, 'v2.0.0'.  
-
+Tags should start with 'v', followed by the build number.  For example, 'v2.1.0'.  
