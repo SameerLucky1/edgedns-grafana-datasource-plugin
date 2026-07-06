@@ -5,20 +5,20 @@ Use the Akamai Edge DNS datasource plugin to observe Edge DNS metrics.
 
 ## Install Grafana 13.1.0 or newer
 
-[Install Grafana](https://grafana.com/docs/grafana/latest/installation/) details the process of installing Grafana on several operating systems.
+[Install Grafana](https://grafana.com/docs/grafana/latest/setup-grafana/installation/) details the process of installing Grafana on several operating systems.
 
 (Be sure to get version 13.1.0 or newer.  Your package manager may install an older version.  It's best to go to 
-[Install Grafana](https://grafana.com/docs/grafana/latest/installation/) and follow the directions there.)
+[Install Grafana](https://grafana.com/docs/grafana/latest/setup-grafana/installation/) and follow the directions there.)
 
 ## Obtain Akamai API credentials
 
 "Akamai Edge DNS Datasource" gets data from the
-[Edge DNS Traffic By Time API](https://developer.akamai.com/api/core_features/reporting/authoritative-dns-traffic-by-time.html).
+[Edge DNS Traffic By Time API](https://techdocs.akamai.com/edge-dns/reference/edge-dns-api).
 
 You need to create an "API Client" with authorization to use the 
-[Edge DNS Traffic By Time API](https://developer.akamai.com/api/core_features/reporting/authoritative-dns-traffic-by-time.html).
+[Edge DNS Traffic By Time API](https://techdocs.akamai.com/edge-dns/reference/edge-dns-api).
 
-See the "Get Started" section of [Reporting API v1](https://developer.akamai.com/api/core_features/reporting/v1.html) 
+See the "Get Started" section of [Reporting API v1](https://techdocs.akamai.com/reporting/v1/reference/api) 
 which says, "To enable this API, choose the API service named reporting-api, and set the access level to READ-WRITE".
 
 Follow directions at [Authenticate With EdgeGrid](https://techdocs.akamai.com/developer/docs/edgegrid) to generate 
@@ -161,10 +161,10 @@ to install_dir\data\plugins\edgedns-grafana-datasource
 
 ### Grafana configuration
 
-[Configuration](https://grafana.com/docs/grafana/latest/administration/configuration/) 
+[Configure Grafana](https://grafana.com/docs/grafana/latest/setup-grafana/configure-grafana/) 
 describes configuration for each operating system.  Carefully read the directions.
 
-* Using a text editor, open the configuration file (as described in [Configuration](https://grafana.com/docs/grafana/latest/administration/configuration/)).
+* Using a text editor, open the configuration file (as described in [Configure Grafana](https://grafana.com/docs/grafana/latest/setup-grafana/configure-grafana/)) .
 
 * Under the [paths] section header, uncomment "plugins" by removing the semicolon.  For example:  
 ```
@@ -185,9 +185,9 @@ plugins = /var/lib/grafana/plugins
 allow_loading_unsigned_plugins = akamai-edgedns-datasource
 ```
 
-### Restart Grafana
-[Restart Grafana](https://grafana.com/docs/grafana/latest/installation/restart-grafana/)
-describes how to restart Grafana for each operating system.
+### Start-Restart Grafana
+[Start-Restart Grafana](https://grafana.com/docs/grafana/latest/setup-grafana/start-restart-grafana/)
+describes how to start and restart Grafana for each operating system.
 
 Under the log directory for your operating system, in "grafana.log", you should see something similar to:
 ```
