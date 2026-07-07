@@ -3,12 +3,12 @@
 ## 2.1.0
 - Migrate to go v1.26.4
 - Upgraded to Grafana 13.1.0
-- Upgraded the plugin to use Akamai Edgegrid v13.2.0
+- Upgraded the plugin to use Akamai Edgegrid v13.3.0
 - Upgraded node dependency to v24
 - Upgraded React from 18.x to 19.2.7
 - Upgraded TypeScript from 5.9.3 to 6.0.3
 - Upgraded mage from 1.15.0 to 1.17.2
-- Upgraded Grafana Plugin SDK (Go backend) from v0.286.0 to v0.292.1
+- Upgraded Grafana Plugin SDK (Go backend) from v0.286.0 to v0.292.2
 - Upgraded Yarn from 1.22.22 to 4.17.0 (Yarn Modern)
 
 ## 2.0.1
