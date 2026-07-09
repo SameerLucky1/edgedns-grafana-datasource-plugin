@@ -1,7 +1,7 @@
 # Changelog
 
 ## 2.1.0
-- Migrate to go v1.26.4
+- Migrate to go v1.26.5
 - Upgraded to Grafana 13.1.0
 - Upgraded the plugin to use Akamai Edgegrid v13.3.0
 - Upgraded node dependency to v24
